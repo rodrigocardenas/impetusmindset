@@ -1,0 +1,109 @@
+:root {
+  /* --- Colores (Tech/Coaching Premium) --- */
+  --sh-bg-primary: #1a1e24;       
+  --sh-bg-secondary: #242932;     
+  --sh-text-primary: #f0f4f8;     
+  --sh-text-secondary: #94a3b8;   
+  --sh-accent-color: #64829e;     
+  --sh-accent-hover: #4e6a84;     
+  --sh-border-color: #333d4b;     
+
+  /* --- Tipografía --- */
+  --sh-font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+  
+  /* --- Espaciados Consistentes --- */
+  --sh-spacing-sm: 0.5rem;   
+  --sh-spacing-md: 1rem;     
+  --sh-spacing-lg: 2rem;     
+  --sh-spacing-xl: 4rem;     
+
+  /* --- Efectos --- */
+  --sh-radius-md: 12px;
+  --sh-shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.social-hub-section {
+  background-color: var(--sh-bg-primary);
+  color: var(--sh-text-primary);
+  font-family: var(--sh-font-main);
+  line-height: 1.6;
+  padding: var(--sh-spacing-xl) var(--sh-spacing-md);
+  box-sizing: border-box;
+}
+
+.social-hub-section * {
+  box-sizing: border-box;
+}
+
+.social-hub-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sh-spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .social-hub-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-hub-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.social-column {
+  background-color: var(--sh-bg-secondary);
+  border: 1px solid var(--sh-border-color);
+  border-radius: var(--sh-radius-md);
+  padding: var(--sh-spacing-lg);
+  box-shadow: var(--sh-shadow-premium);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.social-column:hover {
+  transform: translateY(-6px);
+  border-color: var(--sh-accent-color);
+}
+
+.social-column-title {
+  color: var(--sh-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: var(--sh-spacing-md);
+  padding-bottom: var(--sh-spacing-sm);
+  border-bottom: 2px solid var(--sh-accent-color);
+  display: inline-block;
+}
+
+.social-column-text {
+  color: var(--sh-text-secondary);
+  margin-bottom: var(--sh-spacing-lg);
+  flex-grow: 1;
+}
+
+.social-column .cta-button {
+  display: block;
+  width: 100%;
+  background-color: var(--sh-accent-color);
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--sh-radius-md);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.social-column .cta-button:hover {
+  background-color: var(--sh-accent-hover);
+  transform: scale(1.02);
+  color: #ffffff;
+}
