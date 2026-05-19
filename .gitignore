@@ -1,0 +1,16 @@
+# Archivos de configuración y credenciales
+wp-config.php
+.env
+
+# Directorio de subidas (uploads)
+wp-content/uploads/
+
+# Archivos de dependencias (si usas npm o composer en el futuro)
+node_modules/
+vendor/
+
+# Archivos del sistema y logs
+.DS_Store
+Thumbs.db
+debug.log
+error_log
